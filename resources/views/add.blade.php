@@ -8,7 +8,7 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header card-header-primary" style="text-align:center">
-                                    <h4 class="card-title">Edit User</h4>
+                                    <h4 class="card-title">Add User</h4>
                                 </div>
                                 <div class="card-body">
                                     <form method="post" action="{{route('postAdd')}}"

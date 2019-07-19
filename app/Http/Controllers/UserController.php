@@ -20,7 +20,7 @@ class UserController extends Controller
 
     public function getAll()
     {
-        $user = DB::table('users')->orderBy('name', 'asc')->paginate(5);
+        $user = DB::table('users')->orderBy('name', 'asc')->paginate(3);
         Session::forget(['name', 'email', 'role', 'active_flg']);
         if ($user->isEmpty()) {
             return back();
@@ -93,6 +93,7 @@ class UserController extends Controller
         $user->name = Input::input('name');
         $user->email = Input::input('email');
         $user->role = Input::input('role');
+        $user->password = Input::input('password');
         $user->active_flg = Input::input('active_flg');
         $user->save();
         return redirect('table');
